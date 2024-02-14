@@ -1,3 +1,14 @@
+
+function setVw() {
+	let vw = document.documentElement.clientWidth / 100;
+	document.documentElement.style.setProperty('--vw', `${vw}px`);
+  }
+  
+  setVw();
+  window.addEventListener('resize', setVw);
+
+
+
 //js popup wrap
 const togglePopupButtons = document.querySelectorAll('.js-btn-popup-toggle')
 const closePopupButtons = document.querySelectorAll('.js-btn-popup-close')
@@ -104,6 +115,7 @@ popupElements.forEach(element => {
 })
 
 $(document).ready(function(){
+
 
 	//phone masked
 	$('input[type="tel"]').mask("+7 (999) 999-99-99",{placeholder:"+7 (___) ___-__-__"});
